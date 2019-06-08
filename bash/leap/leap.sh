@@ -3,7 +3,7 @@ main(){
 function leap {
 input=$1
 let output=$(($input % 4)) #(()) IS FOR EVALUATING THE EXPRESSION
-	if [ $output -eq 0 ];then 
+	if [ $output -eq 0 ];then # we can directly use if [ $(($input % 4)) -eq 0 ] && [ $(($input % 100)) -nq 0 ] || [ $(($input % 400)) -eq 0 ]
 		let output=$(($input % 100 ))
 		if [ $output -eq 0 ];then
 			let output=$(( $input % 400))
